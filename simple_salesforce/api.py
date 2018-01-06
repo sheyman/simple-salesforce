@@ -635,7 +635,7 @@ class SFType(object):
         """
         result = self._call_salesforce(
             method='POST', url=self.base_url,
-            data=json.dumps(data), headers=headers
+            data=json.dumps(data), headers=headers, verify=False
         )
         return result.json(object_pairs_hook=OrderedDict)
 
